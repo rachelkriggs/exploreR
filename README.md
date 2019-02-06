@@ -19,9 +19,19 @@ For each column/variable in the dataframe, this function will count the number o
 ###### Function3 | Dataset Size/Info
 This function will take in a dataframe and print the shape and size of the dataframe. For the size, the function will print how much memory the dataframe consumes in Bytes or Megabytes. The function will also return information about the average size of each entry
 
-#### R ecosystem
+#### Comparable Functions Available in the Python and R Ecosystems
+The following are existing functions in Python and R that are similar to those developed within our project.
 
-a paragraph describing where your packages fit into the Python and R ecosystems (are there any other Python or R software packages that have the same/similar functionality? Provide links to any that do. if none exist, then clearly state this as well).
+###### Python
+[df.info()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.info.html): provides summary information about a pandas dataframe, including data types for variables and number of null values.   
+[df.shape()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html): provides the dimensions of a pandas dataframe.    
+[df.count()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.count.html): provides the number of non-missing values in each column or row of the dataframe.  
+
+###### R
+ [dim()](https://www.rdocumentation.org/packages/base/versions/3.5.2/topics/dim): used to obtain the shape of a dataframe.   
+[ncol()](https://www.rdocumentation.org/packages/base/versions/3.5.2/topics/nrow) and [nrow()](https://www.rdocumentation.org/packages/base/versions/3.5.2/topics/nrow)': used to get the number of rows and columns in a dataframe.       
+[str()](https://www.rdocumentation.org/packages/utils/versions/3.5.2/topics/str): provides summary information about the dataframe, including some of the same information as above (i.e. dim, ncol and nrow). str() provides descriptive information about variable and data types in the dataframe.   
+[is.na()](https://www.statmethods.net/input/missingdata.html): provides the number of missing values in the columns of the data frame.
 
 
 #### Collaborators:

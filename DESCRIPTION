@@ -1,12 +1,14 @@
 Package: exploreR
-Title: What the Package Does (One Line, Title Case)
+Title: Explores Dataframe Attributes
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "First",
-           family = "Last",
-           role = c("aut", "cre"),
-           email = "first.last@example.com")
-Description: What the package does (one paragraph).
+Authors@R: c(
+    person("Rachel K.", "Riggs", role = c("aut", "cre"), email = "rachelkriggs@gmail.com"),
+    person("Milos", "Milic", role = c("aut", "cre"), email = "milos.milic@alum.utoronto.ca"),
+    person("Arzan", "Irani", role = c("aut", "cre"), email = "nazra.irani@gmail.com"),
+    person("James", "Pushor", role = c("aut", "cre"), email = "jimpushor@hotmail.com"))
+Description: This package explores attributes of dataframes.
 License: What license it uses
 Encoding: UTF-8
 LazyData: true
+Suggests: 
+    testthat

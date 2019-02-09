@@ -26,7 +26,8 @@ test_that("if the input size is n x d, missing_values returns a dataframe of siz
 })
 
 test_that("outputs correct data types", {
-  expect_is(missing_values(toy_data)$variable_type, "character")
-  expect_is(missing_values(toy_data)$count, "integer")
+  expect_is(missing_values(toy_data)$variable, "character")
+  expect_is(missing_values(toy_data)$missing_values, "integer")
+  expect_is(missing_values(toy_data)$percent_missing, "numeric")
 })
 

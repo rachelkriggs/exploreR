@@ -8,7 +8,8 @@ context("testing size")
 # input: a data frame
 toy_data <- data.frame("letters" = c("a", "b", "c", "d"),
                        "numbers" = seq(1, 4),
-                       "booleans" = c(TRUE, FALSE, FALSE, TRUE))
+                       "booleans" = c(TRUE, FALSE, FALSE, TRUE)
+                       stringsAsFactors = FALSE)
 
 test_that("input to size is a dataframe", {
   expect_is(toy_data, "data.frame")
@@ -32,4 +33,3 @@ test_that("outputs correct data types", {
   expect_is(size(toy_data)$columns, "integer")
   expect_is(size(toy_data)$size_in_memory, "numeric")
 })
-

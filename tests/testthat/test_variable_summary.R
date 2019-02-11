@@ -6,7 +6,8 @@ context("testing variable summary")
 # input: a data frame
 toy_data <- data.frame("letters" = c("a", "b", "c", "d"),
                        "numbers" = seq(1, 4),
-                       "booleans" = c(TRUE, FALSE, FALSE, TRUE))
+                       "booleans" = c(TRUE, FALSE, FALSE, TRUE)
+                       stringsAsFactors = FALSE)
 
 test_that("input to variable_summary is a dataframe", {
   expect_is(toy_data, "data.frame")
@@ -29,4 +30,3 @@ test_that("outputs correct data types", {
   expect_is(variable_summary(toy_data)$variable_type, "character")
   expect_is(variable_summary(toy_data)$count, "integer")
 })
-

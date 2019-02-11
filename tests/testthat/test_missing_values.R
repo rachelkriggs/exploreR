@@ -6,7 +6,8 @@ context("testing missing values")
 # input: a data frame
 toy_data <- data.frame("letters" = c("a", "b", "c", "d"),
                        "numbers" = seq(1, 4),
-                       "booleans" = c(TRUE, FALSE, FALSE, TRUE))
+                       "booleans" = c(TRUE, FALSE, FALSE, TRUE),
+                       stringsAsFactors = FALSE)
 
 test_that("input to missing_values is a dataframe", {
   expect_is(toy_data, "data.frame")
@@ -29,4 +30,3 @@ test_that("outputs correct data types", {
   expect_is(missing_values(toy_data)$variable_type, "character")
   expect_is(missing_values(toy_data)$count, "integer")
 })
-

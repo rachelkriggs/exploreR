@@ -1,20 +1,19 @@
 # This script tests the missing_values() function
-# library(testthat)
 
 context("testing missing values")
 
 # input: a data frame
-toy_data <- data.frame("letters" = c("a", "b", "c", "d"),
-                       "numbers" = seq(1, 4),
-                       "booleans" = c(TRUE, FALSE, FALSE, TRUE),
+toy_data <- data.frame("letters" = c("a", "b", NA, "d"),
+                       "numbers" = c(1, 4, 6, NA),
+                       "booleans" = c(NA, FALSE, NA, TRUE),
                        stringsAsFactors = FALSE)
 
 test_that("input to missing_values is a dataframe", {
-  expect_is(toy_data, "data.frame")
+  expect_is(missing_values(toy_data), "data.frame")
 })
 
 test_that("in case the input is not a dataframe", {
-  expect_error(missing_values(matrix(1:9, nrow = 4, ncol = 3)))
+  expect_error(missing_values(matrix(1:12, nrow = 4, ncol = 3)))
 })
 
 test_that("missing_values returns an object of type data.frame", {
@@ -28,6 +27,6 @@ test_that("if the input size is n x d, missing_values returns a dataframe of siz
 
 test_that("outputs correct data types", {
   expect_is(missing_values(toy_data)$variable, "character")
-  expect_is(missing_values(toy_data)$missing_values, "integer")
+  expect_is(missing_values(toy_data)$missing_vals, "integer")
   expect_is(missing_values(toy_data)$percent_missing, "numeric")
 })

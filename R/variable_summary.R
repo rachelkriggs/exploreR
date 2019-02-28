@@ -1,11 +1,20 @@
-# Remove toy data frame before submitting
-toy_data <- data.frame("letters" = c("a", "b", NA, "d"),
-                       "numbers" = seq(1, 2),
-                       "booleans" = c(TRUE, FALSE, FALSE, TRUE),
-                       stringsAsFactors = FALSE)
+#' Variable Summary
+#'
+#' takes a data frame as input and provides the total quantity
+#' of each type of variable present in the data frame
+#'
+#' @param x a dataframe
+#'
+#' @return a dataframe
+#' @export
+#'
 
-# variable_summary function
 variable_summary <- function(x){
+
+  # check that input is a dataframe
+  if (!(is.data.frame(x))) {
+    stop("Please input a dataframe")
+  }
 
   # initialize counters for each variable type
   num_count = 0
@@ -19,13 +28,13 @@ variable_summary <- function(x){
 
   # count the types
   for (i in 1:length(var_types)) {
-    if (test[[i]] == "numeric") {
+    if (var_types[[i]] == "numeric") {
       num_count = num_count + 1
-    } else if (test[[i]] == "character") {
+    } else if (var_types[[i]] == "character") {
       char_count = char_count + 1
-    } else if (test[[i]] == "logical") {
+    } else if (var_types[[i]] == "logical") {
       bool_count = bool_count + 1
-    } else if (test[[i]] == "Date") {
+    } else if (var_types[[i]] == "Date") {
       date_count = date_count + 1
     } else {
       other_count = other_count + 1
@@ -33,10 +42,7 @@ variable_summary <- function(x){
   }
 
   # return a data frame of the summary results
-  data.frame("variable type" = c("numeric", "character", "boolean", "date", "other"),
-             "count" = c(num_count, char_count, bool_count, date_count, other_count))
+  data.frame("variable_type" = c("numeric", "character", "boolean", "date", "other"),
+             "count" = c(num_count, char_count, bool_count, date_count, other_count),
+             stringsAsFactors = FALSE)
 }
-
-# function call for dev purposes only
-variable_summary(toy_data)
-

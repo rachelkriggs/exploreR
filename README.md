@@ -60,7 +60,7 @@ To install exploreR, follow these instructions:
 
 1. Input the following into the Terminal:
 
-  `devtools::install_github("exploreR")`
+  `devtools::install_github("UBC-MDS/exploreR", build_vignettes = TRUE, force = TRUE)`
 
 2. The package is now installed and ready for use.
 

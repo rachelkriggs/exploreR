@@ -105,6 +105,18 @@ The following are existing functions in R that are similar to those developed wi
 [is.na()](https://www.statmethods.net/input/missingdata.html): provides the number of missing values in the columns of the data frame.
 
 
+#### Installation
+
+To install exploreR, follow these instructions:
+
+1. Input the following into the Terminal:
+
+  `devtools::install_github("UBC-MDS/exploreR", build_vignettes = TRUE, force = TRUE)`
+
+2. The package is now installed and ready for use.
+
+
+
 ### Collaborators:
 
 | name | github handle |

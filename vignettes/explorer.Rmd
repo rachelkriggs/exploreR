@@ -1,10 +1,10 @@
 ---
 title: "Summary and Usage of ExploreR"
-author: "Vignette Author"
+author: "Milos Milic, Jim Pushor, Arzan Irani, Rachel Riggs"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{exploreR}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

@@ -16,9 +16,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-Welcome to explorR This is a small package that will provide very useful summaries of your data frame. It is best used before youer Exploratory Data Analysis. The package is composed of three functions. The instrunctions below will explain the use and the specfifc output based on the data_frame input provided for the function.
+Welcome to exploreR! This is a small package that will provide very useful summaries of your data frame. It is best used before your exploratory data analysis. The package is composed of three functions. The instructions below will explain the use and the specific output based on the data frame input provided for the function.
 
-You can use the data frame to see how the functions work
+You can use the data frame to see how the functions work.
 
 ```{r}
 toy_data <- data.frame("letters" = c("a", "b", "c", "d"),
@@ -30,13 +30,13 @@ toy_data <- data.frame("letters" = c("a", "b", "c", "d"),
 
 #### Function 1 | Variable summary
 
-This function will take in one argument(a data frame) and return a data frame
+This function will take in one argument(a data frame) and return a data frame.
 ```{r}
 variable_summary(toy_data)
 
 ```
 
-In our toy_data example, this would return the data frame below
+Using our `toy_data` example, `variable_summary()` would return the following data frame.
 
 | variable_type | count |
 | ------------- | ----- |
@@ -50,7 +50,7 @@ In our toy_data example, this would return the data frame below
 
 #### Function 2 | Missing values per variable
 
-For this function we will use a modified data frame. This function takes in the single data frame argument and return the amount of empty cells and a percentage of empty cells compared to the length of the column
+For this function we will use a modified data frame. This function takes in the single data frame argument and returns the amount of empty cells and a percentage of empty cells compared to the length of the column.
 
 ```{r}
 toy_data_2 <- data.frame("letters" = c("a", "b", NA, "d"),
@@ -62,7 +62,7 @@ missing_values(toy_data_2)
 
 ```
 
-In our toy_data_2, example this would return
+Using our `toy_data_2` example, `missing_values()` would return the following data frame.
 
 | variable      | missing_values | percent_missing |
 | ------------- | ----- | ------ |
@@ -74,7 +74,7 @@ In our toy_data_2, example this would return
 
 #### Function3 | Dataset Size/Info
 
-This function will take in one argument(a data frame) and will provide a short summary of the Data Frame.
+This function will take in one argument(a data frame) and will provide a short summary of the data frame.
 
 
 
@@ -84,7 +84,7 @@ size(toy_data)
 
 ```
 
-In our toy_data, example this would return
+Using our `toy_data` example, `size()` would return the following data frame.
 
 
 example output of `size`:

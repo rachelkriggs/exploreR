@@ -6,6 +6,8 @@ context("testing variable summary")
 toy_data <- data.frame("letters" = c("a", "b", NA, "d"),
                        "numbers" = c(1, 4, 6, NA),
                        "booleans" = c(NA, FALSE, NA, TRUE),
+                       "dates" = as.Date(c("2003-01-02", "2002-02-02", "2004-03-03", "2005-04-04")),
+                       "integers" = c(2L, 3L, 4L, 5L),
                        stringsAsFactors = FALSE)
 
 test_that("input to variable_summary is a dataframe", {

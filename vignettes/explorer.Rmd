@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-Welcome to exploreR This is a small package that will provide very useful summaries of your data frame. It is best used before your exploratory data analysis. The package is composed of three functions. The instructions below will explain the use and the specific output based on the data frame input provided for the function.
+Welcome to exploreR! This is a small package that will provide very useful summaries of your data frame. It is best used before your exploratory data analysis. The package is composed of three functions. The instructions below will explain the use and the specific output based on the data frame input provided for the function.
 
 You can use the data frame to see how the functions work.
 

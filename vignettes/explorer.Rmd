@@ -32,7 +32,7 @@ toy_data <- data.frame("letters" = c("a", "b", "c", "d"),
 
 This function will take in one argument(a data frame) and return a data frame.
 ```{r}
-variable_summary(toy_data)
+#variable_summary(toy_data)
 
 ```
 
@@ -58,7 +58,7 @@ toy_data_2 <- data.frame("letters" = c("a", "b", NA, "d"),
                        "booleans" = c(NA, FALSE, NA, TRUE),
                        stringsAsFactors = FALSE)
 
-missing_values(toy_data_2)
+#missing_values(toy_data_2)
 
 ```
 
@@ -80,7 +80,7 @@ This function will take in one argument(a data frame) and will provide a short s
 
 ```{r}
 
-size(toy_data)
+#size(toy_data)
 
 ```
 
@@ -91,7 +91,7 @@ example output of `size`:
 
 | rows  | columns | size_in_memory |
 | ----- | ------- | -------------- |
-| 1  | 3     | 0.02mb         |
+| 4  | 3     | 0.02mb         |
 
 
 

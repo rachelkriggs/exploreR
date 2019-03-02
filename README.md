@@ -12,7 +12,7 @@ exploreR is an R package loaded with methods to help explore and explain the con
 
 To install exploreR, follow these instructions:
 
-1. Input the following into the Terminal:
+1. Input the following into the console:
 
   `devtools::install_github("UBC-MDS/exploreR", build_vignettes = TRUE, force = TRUE)`
 

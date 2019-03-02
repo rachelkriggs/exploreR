@@ -1,5 +1,5 @@
 ---
-title: "Summary and Usage of ExploreR"
+title: "exploreR"
 author: "Milos Milic, Jim Pushor, Arzan Irani, Rachel Riggs"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette

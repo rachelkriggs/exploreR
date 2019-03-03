@@ -21,6 +21,12 @@ To install exploreR, follow these instructions:
 
 ### Functions and Example Usage
 
+First, load the package.
+
+```
+library(exploreR)
+```
+
 #### Function 1 | Variable summary
 The function `variable_summary` will take a data frame as input and provide the total quantity of each type of variable present in the data frame. The output of the function will be a dataframe of size 5 x 2 and will have one row for each variable type with its corresponding quantity. The function will look to identify 5 different types of variables: numerical, character, boolean, date, and an other category.
 

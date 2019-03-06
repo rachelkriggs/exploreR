@@ -11,8 +11,6 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests:
-    testthat,
-    covr,
-    testthat, knitr, rmarkdown
+    testthat, knitr, rmarkdown, covr
 VignetteBuilder: knitr
 RoxygenNote: 6.1.1

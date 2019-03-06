@@ -18,10 +18,23 @@ To install exploreR, follow these instructions:
 
 2. The package is now installed and ready for use.
 
+### Vignette
+
+To view the vignette, follow these instructions:
+
+1. Open `exploreR.Rproj` in RStudio.
+
+2. In the console, enter the following commands:
+
+```
+devtools::check()
+devtools::build_vignettes()
+browseVignettes(package ='exploreR')
+```
 
 ### Functions and Example Usage
 
-First, load the package.
+Load the package.
 
 ```
 library(exploreR)

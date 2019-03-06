@@ -16,3 +16,9 @@ a dataframe
 counts the number of missing values present in a data frame
 and reports back number and percent missing for each variable
 }
+\examples{
+data <- data.frame("names" = c("Rachel", "Jim", "Milos", NA),
+                   "numbers" = c(2, NA, 6, 8),
+                   "truths" = c(NA, TRUE, TRUE, FALSE))
+missing_values(data)
+}

@@ -7,6 +7,11 @@
 #' @return a dataframe
 #' @export
 #'
+#' @examples
+#' data <- data.frame("names" = c("Rachel", "Jim", "Milos", "Arzan"),
+#'                    "numbers" = c(2, 4, 6, 8),
+#'                    "truths" = c(TRUE, TRUE, TRUE, FALSE))
+#' size(data)
 
 size <- function(x) {
 

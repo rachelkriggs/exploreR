@@ -16,3 +16,9 @@ a dataframe
 takes a data frame as input and provides the total quantity
 of each type of variable present in the data frame
 }
+\examples{
+data <- data.frame("names" = c("Rachel", "Jim", "Milos", "Arzan"),
+                   "numbers" = c(2, 4, 6, 8),
+                   "truths" = c(TRUE, TRUE, TRUE, FALSE))
+variable_summary(data)
+}

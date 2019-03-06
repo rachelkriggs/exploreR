@@ -101,6 +101,13 @@ example output of `size`:
 | ----- | ------- | -------------- |
 | 4     | 5       | 1760           |
 
+Check out the package vignette for more information by entering the following in the console:
+
+`vignette("explorer")` for viewing inside the RStudio viewer
+
+or
+
+`browseVignettes(package="exploreR")` for viewing in a browser
 
 ### Comparable Functions Available in the R Ecosystem
 The following are existing functions in R that are similar to those developed within our project.

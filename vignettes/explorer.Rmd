@@ -1,0 +1,61 @@
+---
+title: "exploreR"
+author: "Milos Milic, Jim Pushor, Arzan Irani, Rachel Riggs"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{exploreR}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Welcome to exploreR! This is a small package that will provide very useful summaries of your data frame. It is best used before your exploratory data analysis. The package is composed of three functions. The instructions below will explain the use and the specific output based on the data frame input provided for the function.
+
+First, load the package.
+
+```{r}
+library(exploreR)
+```
+
+You can use this toy data frame to see how the functions work.
+
+```{r}
+toy_data <- data.frame("letters" = c("a", "b", NA, "d"),
+                       "numbers" = c(1, 4, 6, NA),
+                       "booleans" = c(NA, FALSE, NA, TRUE),
+                       "dates" = as.Date(c("2003-01-02", "2002-02-02", "2004-03-03", "2005-04-04")),
+                       "integers" = c(2L, 3L, 4L, 5L),
+                       stringsAsFactors = FALSE)
+```
+
+#### Function 1 | Variable summary
+
+This function will take in one argument (a data frame) and return a data frame. Using our `toy_data` example, `variable_summary()` returns the following data frame.
+
+```{r}
+variable_summary(toy_data)
+```
+
+#### Function 2 | Missing values per variable
+
+This function takes in the single data frame argument and returns the amount of empty cells and a percentage of empty cells compared to the length of the column. Again using our `toy_data` example, `missing_values()` returns the following data frame.
+
+```{r}
+missing_values(toy_data)
+```
+
+#### Function3 | Dataset Size/Info
+
+This function will take in one argument (a data frame) and will provide a short summary of the data frame. Again using our `toy_data` example, `size()` returns the following data frame.
+
+```{r}
+size(toy_data)
+```
+

@@ -8,6 +8,11 @@
 #' @return a dataframe
 #' @export
 #'
+#' @examples
+#' data <- data.frame("names" = c("Rachel", "Jim", "Milos", NA),
+#'                    "numbers" = c(2, NA, 6, 8),
+#'                    "truths" = c(NA, TRUE, TRUE, FALSE))
+#' missing_values(data)
 
 missing_values <- function(x) {
 

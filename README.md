@@ -6,7 +6,6 @@
 
 [![Build Status](https://travis-ci.org/UBC-MDS/exploreR.svg?branch=master)](https://travis-ci.org/UBC-MDS/exploreR)
 
-
 ### A Collaborative Software Development Project
 
 February 2019

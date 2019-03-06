@@ -14,23 +14,10 @@ To install exploreR, follow these instructions:
 
 1. Input the following into the console:
 
-  `devtools::install_github("UBC-MDS/exploreR", build_vignettes = TRUE, force = TRUE)`
+  `devtools::install_github("UBC-MDS/exploreR", build_opts = c("--no-resave-data", "--no-manual"))`
 
 2. The package is now installed and ready for use.
 
-### Vignette
-
-To view the vignette, follow these instructions:
-
-1. Open `exploreR.Rproj` in RStudio.
-
-2. In the console, enter the following commands:
-
-```
-devtools::check()
-devtools::build_vignettes()
-browseVignettes(package ='exploreR')
-```
 
 ### Functions and Example Usage
 

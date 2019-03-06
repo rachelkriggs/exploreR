@@ -4,7 +4,7 @@
 
 [![Coverage status](https://codecov.io/gh/UBC-MDS/exploreR/branch/master/graph/badge.svg)](https://codecov.io/github/UBC-MDS/exploreR?branch=master)
 
-
+[![Build Status](https://travis-ci.org/UBC-MDS/exploreR.svg?branch=master)](https://travis-ci.org/UBC-MDS/exploreR)
 
 
 ### A Collaborative Software Development Project

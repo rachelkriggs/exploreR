@@ -47,7 +47,7 @@ variable_summary <- function(x){
   }, error=function(e) print("We encountered an error that was not related to x being a dataframe or counts"))
 
   # return a data frame of the summary results
-  data.frame("variable_type" = c("numeric", "character", "boolean", "date", "other"),
+  data.frame("variable_type" = c("numeric", "character", "logical", "date", "other"),
              "count" = c(num_count, char_count, bool_count, date_count, other_count),
              stringsAsFactors = FALSE)
 }

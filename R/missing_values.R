@@ -25,11 +25,11 @@ missing_values <- function(x) {
   missing_vals <- vector("integer", ncol(x))
   percent_missing <- vector("double", ncol(x))
 
-  for (i in seq_along(x)){
+  tryCatch(for (i in seq_along(x)){
     variable[[i]] <- colnames(x[i])
     missing_vals[[i]] <- sum(is.na(x[i]))
     percent_missing[[i]] <- sum(is.na(x[i]))/nrow(x[i])
-  }
+  }, error=function(e) print("We encountered an error that was not related to x being a dataframe"))
 
   # return a dataframe of the results
   data.frame(variable, missing_vals, percent_missing, stringsAsFactors = FALSE)

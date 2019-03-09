@@ -16,6 +16,7 @@
 size <- function(x) {
 
   # check that input is a dataframe
+  # This if satement works better than having a try catch statement instead
   if (!(is.data.frame(x))) {
     stop("Please input a dataframe")
   }

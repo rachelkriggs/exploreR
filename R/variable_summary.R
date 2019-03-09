@@ -32,7 +32,7 @@ variable_summary <- function(x){
   var_types <- sapply(x, class)
 
   # count the types
-  for (i in 1:length(var_types)) {
+  tryCatch ( for (i in 1:length(var_types)) {
     if (var_types[[i]] == "numeric") {
       num_count = num_count + 1
     } else if (var_types[[i]] == "character") {
@@ -44,7 +44,7 @@ variable_summary <- function(x){
     } else {
       other_count = other_count + 1
     }
-  }
+  }, error=function(e) print("We encountered an error that was not related to x being a dataframe or counts"))
 
   # return a data frame of the summary results
   data.frame("variable_type" = c("numeric", "character", "boolean", "date", "other"),

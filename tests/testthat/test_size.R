@@ -5,7 +5,7 @@ context("testing size")
 # input: a data frame
 toy_data <- data.frame("letters" = c("a", "b", NA, "d"),
                        "numbers" = c(1, 4, 6, NA),
-                       "booleans" = c(NA, FALSE, NA, TRUE),
+                       "logical" = c(NA, FALSE, NA, TRUE),
                        stringsAsFactors = FALSE)
 
 test_that("input to size is a dataframe", {

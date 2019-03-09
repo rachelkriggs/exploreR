@@ -7,7 +7,7 @@
 
 ### A Collaborative Software Development Project
 
-February 2019
+March 2019
 
 ### Overview
 
@@ -40,7 +40,7 @@ example usage of `variable_summary`:
 ```
 toy_data <- data.frame("letters" = c("a", "b", NA, "d"),
                        "numbers" = c(1, 4, 6, NA),
-                       "booleans" = c(NA, FALSE, NA, TRUE),
+                       "logical" = c(NA, FALSE, NA, TRUE),
                        "dates" = as.Date(c("2003-01-02", "2002-02-02", "2004-03-03", "2005-04-04")),
                        "integers" = c(2L, 3L, 4L, 5L),
                        stringsAsFactors = FALSE)
@@ -54,7 +54,7 @@ example output of `variable_summary`:
 | ------------- | ----- |
 | numeric       | 1     |
 | character     | 1     |
-| boolean       | 1     |
+| logical       | 1     |
 | date          | 1     |
 | other         | 1     |
 
@@ -66,7 +66,7 @@ example usage of `missing_values`:
 ```
 toy_data <- data.frame("letters" = c("a", "b", NA, "d"),
                        "numbers" = c(1, 4, 6, NA),
-                       "booleans" = c(NA, FALSE, NA, TRUE),
+                       "logical" = c(NA, FALSE, NA, TRUE),
                        "dates" = as.Date(c("2003-01-02", "2002-02-02", "2004-03-03", "2005-04-04")),
                        "integers" = c(2L, 3L, 4L, 5L),
                        stringsAsFactors = FALSE)
@@ -80,19 +80,19 @@ example output of `missing_values`:
 | ------------- | ----- | ------ |
 | letters       | 1     | 0.25   |
 | numbers       | 1     | 0.25   |
-| booleans      | 2     | 0.50   |
+| logical       | 2     | 0.50   |
 | dates         | 0     | 0.00   |
 | integers      | 0     | 0.00   |
 
 #### Function3 | Dataset Size/Info
-The function `size` will take in a dataframe and print the shape and size of the dataframe. For the size, the function will print how much memory the dataframe consumes in Bytes or Megabytes. The output of the function will be a dataframe of size 1 x 3.
+The function `size` will take in a dataframe and print the shape and size of the dataframe. For the size, the function will print how much memory the dataframe consumes in bytes. The output of the function will be a dataframe of size 1 x 3.
 
 example usage of `size`:
 
 ```
 toy_data <- data.frame("letters" = c("a", "b", NA, "d"),
                        "numbers" = c(1, 4, 6, NA),
-                       "booleans" = c(NA, FALSE, NA, TRUE),
+                       "logical" = c(NA, FALSE, NA, TRUE),
                        "dates" = as.Date(c("2003-01-02", "2002-02-02", "2004-03-03", "2005-04-04")),
                        "integers" = c(2L, 3L, 4L, 5L),
                        stringsAsFactors = FALSE)
@@ -130,3 +130,9 @@ The following are existing functions in R that are similar to those developed wi
 | Milos Milic     | [@milicmil](https://github.com/milicmil) |
 | Arzan Irani     | [@nazra-inari](https://github.com/nazra-inari) |
 | James Pushor    | [@jpush1773](https://github.com/jpush1773)
+
+### Test Results
+
+![](imgs/exploreR_test.png)
+
+![](imgs/Rtest.png)

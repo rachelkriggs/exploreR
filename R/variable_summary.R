@@ -1,21 +1,53 @@
-# Remove toy data frame before submitting
-toy_data <- data.frame("letters" = c("a", "b", NA, "d"),
-                       "numbers" = seq(1, 2),
-                       "booleans" = c(TRUE, FALSE, FALSE, TRUE),
-                       stringsAsFactors = FALSE)
+#' Variable Summary
+#'
+#' takes a data frame as input and provides the total quantity
+#' of each type of variable present in the data frame
+#'
+#' @param x a dataframe
+#'
+#' @return a dataframe
+#' @export
+#'
+#' @examples
+#' data <- data.frame("names" = c("Rachel", "Jim", "Milos", "Arzan"),
+#'                    "numbers" = c(2, 4, 6, 8),
+#'                    "truths" = c(TRUE, TRUE, TRUE, FALSE))
+#' variable_summary(data)
 
-# variable_summary function
 variable_summary <- function(x){
-  type <- vector("character", ncol(x))
-  number <- vector("integer", ncol(x))
-  for (i in seq_along(x)){
-    type[[i]] <- typeof(x[[i]])
-    number[[i]] <- sum(!is.na(x[i]))
+
+  # check that input is a dataframe
+  if (!(is.data.frame(x))) {
+    stop("Please input a dataframe")
   }
-  data.frame("variable_type" = type,
-             "count" = number)
+
+  # initialize counters for each variable type
+  num_count = 0
+  char_count = 0
+  bool_count = 0
+  date_count = 0
+  other_count = 0
+
+  # get the type of all variables
+  var_types <- sapply(x, class)
+
+  # count the types
+  tryCatch ( for (i in 1:length(var_types)) {
+    if (var_types[[i]] == "numeric") {
+      num_count = num_count + 1
+    } else if (var_types[[i]] == "character") {
+      char_count = char_count + 1
+    } else if (var_types[[i]] == "logical") {
+      bool_count = bool_count + 1
+    } else if (var_types[[i]] == "Date") {
+      date_count = date_count + 1
+    } else {
+      other_count = other_count + 1
+    }
+  }, error=function(e) print("We encountered an error that was not related to x being a dataframe or counts"))
+
+  # return a data frame of the summary results
+  data.frame("variable_type" = c("numeric", "character", "logical", "date", "other"),
+             "count" = c(num_count, char_count, bool_count, date_count, other_count),
+             stringsAsFactors = FALSE)
 }
-
-# function call for dev purposes only
-variable_summary(toy_data)
-

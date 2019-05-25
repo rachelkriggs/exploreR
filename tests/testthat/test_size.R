@@ -1,22 +1,19 @@
 # This script tests the size() function
 
 context("testing size")
-# library(testthat)
-
-context("testing size")
 
 # input: a data frame
-toy_data <- data.frame("letters" = c("a", "b", "c", "d"),
-                       "numbers" = seq(1, 4),
-                       "booleans" = c(TRUE, FALSE, FALSE, TRUE)
+toy_data <- data.frame("letters" = c("a", "b", NA, "d"),
+                       "numbers" = c(1, 4, 6, NA),
+                       "logical" = c(NA, FALSE, NA, TRUE),
                        stringsAsFactors = FALSE)
 
 test_that("input to size is a dataframe", {
-  expect_is(toy_data, "data.frame")
+  expect_is(size(toy_data), "data.frame")
 })
 
 test_that("in case the input is not a dataframe", {
-  expect_error(size(matrix(1:9, nrow = 4, ncol = 3)))
+  expect_error(size(matrix(1:12, nrow = 4, ncol = 3)))
 })
 
 test_that("size returns an object of type data.frame", {

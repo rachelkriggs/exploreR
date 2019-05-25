@@ -2,13 +2,15 @@ Package: exploreR
 Title: Explores Dataframe Attributes
 Version: 0.0.0.9000
 Authors@R: c(
-    person("Rachel K.", "Riggs", role = c("aut", "cre"), email = "rachelkriggs@gmail.com"),
-    person("Milos", "Milic", role = c("aut", "cre"), email = "milos.milic@alum.utoronto.ca"),
-    person("Arzan", "Irani", role = c("aut", "cre"), email = "nazra.irani@gmail.com"),
+    person("Rachel K.", "Riggs", role = c("aut"), email = "rachelkriggs@gmail.com"),
+    person("Milos", "Milic", role = c("aut"), email = "milos.milic@alum.utoronto.ca"),
+    person("Arzan", "Irani", role = c("aut"), email = "nazra.irani@gmail.com"),
     person("James", "Pushor", role = c("aut", "cre"), email = "jimpushor@hotmail.com"))
 Description: This package explores attributes of dataframes.
-License: What license it uses
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Suggests: 
-    testthat
+Suggests:
+    testthat, knitr, rmarkdown, covr
+VignetteBuilder: knitr
+RoxygenNote: 6.1.1
